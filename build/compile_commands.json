@@ -1,0 +1,74 @@
+[
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/imnodes.dir/ext/imnodes/imnodes.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes/imnodes.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes/imnodes.cpp",
+  "output": "CMakeFiles/imnodes.dir/ext/imnodes/imnodes.cpp.o"
+},
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/imnodes.dir/ext/imgui/imgui.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui.cpp",
+  "output": "CMakeFiles/imnodes.dir/ext/imgui/imgui.cpp.o"
+},
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/imnodes.dir/ext/imgui/imgui_draw.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_draw.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_draw.cpp",
+  "output": "CMakeFiles/imnodes.dir/ext/imgui/imgui_draw.cpp.o"
+},
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/imnodes.dir/ext/imgui/imgui_tables.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_tables.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_tables.cpp",
+  "output": "CMakeFiles/imnodes.dir/ext/imgui/imgui_tables.cpp.o"
+},
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/imnodes.dir/ext/imgui/imgui_widgets.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_widgets.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_widgets.cpp",
+  "output": "CMakeFiles/imnodes.dir/ext/imgui/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build/app",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../include -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -isystem /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/main_app.dir/main.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/app/main.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/app/main.cpp",
+  "output": "app/CMakeFiles/main_app.dir/main.cpp.o"
+},
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build/app",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../include -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -isystem /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/main_app.dir/__/ext/imgui/imgui.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui.cpp",
+  "output": "app/CMakeFiles/main_app.dir/__/ext/imgui/imgui.cpp.o"
+},
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build/app",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../include -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -isystem /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/main_app.dir/__/ext/imgui/imgui_draw.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_draw.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_draw.cpp",
+  "output": "app/CMakeFiles/main_app.dir/__/ext/imgui/imgui_draw.cpp.o"
+},
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build/app",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../include -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -isystem /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/main_app.dir/__/ext/imgui/imgui_tables.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_tables.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_tables.cpp",
+  "output": "app/CMakeFiles/main_app.dir/__/ext/imgui/imgui_tables.cpp.o"
+},
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build/app",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../include -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -isystem /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/main_app.dir/__/ext/imgui/imgui_widgets.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_widgets.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/imgui_widgets.cpp",
+  "output": "app/CMakeFiles/main_app.dir/__/ext/imgui/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build/app",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../include -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -isystem /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/main_app.dir/__/ext/imgui/backends/imgui_impl_glfw.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends/imgui_impl_glfw.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends/imgui_impl_glfw.cpp",
+  "output": "app/CMakeFiles/main_app.dir/__/ext/imgui/backends/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/home/ion-hz/Develop/cpp/project/imnode-playground/build/app",
+  "command": "/usr/bin/c++ -DIMGUI_DISABLE_DEMO_WINDOWS=1 -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../ext/imnodes -I/home/ion-hz/Develop/cpp/project/imnode-playground/app/../include -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui -I/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imnodes -isystem /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends -std=gnu++20 -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -o CMakeFiles/main_app.dir/__/ext/imgui/backends/imgui_impl_opengl3.cpp.o -c /home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends/imgui_impl_opengl3.cpp",
+  "file": "/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends/imgui_impl_opengl3.cpp",
+  "output": "app/CMakeFiles/main_app.dir/__/ext/imgui/backends/imgui_impl_opengl3.cpp.o"
+}
+]

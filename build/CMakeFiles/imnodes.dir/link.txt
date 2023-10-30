@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libimnodes.a CMakeFiles/imnodes.dir/ext/imnodes/imnodes.cpp.o CMakeFiles/imnodes.dir/ext/imgui/imgui.cpp.o CMakeFiles/imnodes.dir/ext/imgui/imgui_draw.cpp.o CMakeFiles/imnodes.dir/ext/imgui/imgui_tables.cpp.o CMakeFiles/imnodes.dir/ext/imgui/imgui_widgets.cpp.o
+/usr/bin/ranlib lib/libimnodes.a
