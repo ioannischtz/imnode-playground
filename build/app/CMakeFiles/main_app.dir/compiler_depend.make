@@ -1188,6 +1188,7 @@ app/CMakeFiles/main_app.dir/main.cpp.o: /home/ion-hz/Develop/cpp/project/imnode-
   /usr/include/c++/13.2.1/bits/hashtable_policy.h \
   /usr/include/c++/13.2.1/bits/invoke.h \
   /usr/include/c++/13.2.1/bits/ios_base.h \
+  /usr/include/c++/13.2.1/bits/istream.tcc \
   /usr/include/c++/13.2.1/bits/iterator_concepts.h \
   /usr/include/c++/13.2.1/bits/locale_classes.h \
   /usr/include/c++/13.2.1/bits/locale_classes.tcc \
@@ -1281,6 +1282,8 @@ app/CMakeFiles/main_app.dir/main.cpp.o: /home/ion-hz/Develop/cpp/project/imnode-
   /usr/include/c++/13.2.1/initializer_list \
   /usr/include/c++/13.2.1/ios \
   /usr/include/c++/13.2.1/iosfwd \
+  /usr/include/c++/13.2.1/iostream \
+  /usr/include/c++/13.2.1/istream \
   /usr/include/c++/13.2.1/iterator \
   /usr/include/c++/13.2.1/limits \
   /usr/include/c++/13.2.1/memory \
@@ -1529,6 +1532,8 @@ app/CMakeFiles/main_app.dir/main.cpp.o: /home/ion-hz/Develop/cpp/project/imnode-
 
 /usr/include/c++/13.2.1/bits/basic_ios.tcc:
 
+/usr/include/c++/13.2.1/bits/istream.tcc:
+
 /usr/include/c++/13.2.1/bits/atomic_wait.h:
 
 /usr/include/c++/13.2.1/bits/deque.tcc:
@@ -1554,6 +1559,8 @@ app/CMakeFiles/main_app.dir/main.cpp.o: /home/ion-hz/Develop/cpp/project/imnode-
 /usr/include/bits/types/struct_sched_param.h:
 
 /usr/include/bits/types/struct_itimerspec.h:
+
+/usr/include/c++/13.2.1/iostream:
 
 /usr/include/bits/types/mbstate_t.h:
 
@@ -1814,6 +1821,8 @@ app/CMakeFiles/main_app.dir/main.cpp.o: /home/ion-hz/Develop/cpp/project/imnode-
 /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/os_defines.h:
 
 /usr/include/sys/cdefs.h:
+
+/usr/include/c++/13.2.1/istream:
 
 /usr/include/GLFW/glfw3.h:
 

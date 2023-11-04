@@ -229,6 +229,9 @@ DART_TESTING_TIMEOUT:STRING=1500
 //Enable DEBUG_LOG environment variable
 DEBUG_LOG:BOOL=OFF
 
+//Path to a program.
+GITCOMMAND:FILEPATH=/usr/bin/git
+
 IMGUI_BACKENDS_DIR:STRING=/home/ion-hz/Develop/cpp/project/imnode-playground/ext/imgui/backends
 
 //Include the ImGui demo window implementation in library
@@ -540,6 +543,8 @@ CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/libOpenGL.so][/usr/lib/libGLX.so][/usr/include][c ][v()]
+//ADVANCED property for variable: GITCOMMAND
+GITCOMMAND-ADVANCED:INTERNAL=1
 GLFW_CFLAGS:INTERNAL=
 GLFW_CFLAGS_I:INTERNAL=
 GLFW_CFLAGS_OTHER:INTERNAL=
