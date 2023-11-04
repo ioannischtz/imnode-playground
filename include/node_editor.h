@@ -5,11 +5,13 @@
 #include "imnodes.h"
 #include "node.h"
 #include "ui_node.h"
+#include <GLFW/glfw3.h>
 #include <algorithm>
 #include <cmath>
 #include <cstddef>
 #include <cstring>
 #include <functional>
+#include <iostream>
 #include <memory>
 #include <numeric>
 #include <stack>
@@ -21,9 +23,14 @@ class NodeEditor {
 public:
   NodeEditor()
       : graph_(), ui_nodes_(), root_node_id_(-1),
-        minimap_location_(ImNodesMiniMapLocation_BottomRight) {}
+        minimap_location_(ImNodesMiniMapLocation_BottomRight),
+        current_time_s(0.0) {}
 
   void show() {
+    std::cout << "show()" << std::endl;
+    // update timer context
+    current_time_s = glfwGetTime();
+
     buildMenuBar();
     ImGui::TextUnformatted(
         "See the output result using nodes as a processing pipeline.");
@@ -34,6 +41,11 @@ public:
     ImNodes::BeginNodeEditor();
 
     handleNewNodes();
+
+    if (root_node_id_ != -1) {
+      process();
+    }
+
     drawNodeBlocks();
     drawEdges();
 
@@ -43,15 +55,12 @@ public:
     handleNewLinks();
     handleDeletedLinks();
 
-    if (root_node_id_ != -1) {
-      process();
-    }
-
     ImGui::End();
   }
 
 private:
   void buildMenuBar() {
+    std::cout << "buildMenuBar()\n";
     auto flags = ImGuiWindowFlags_MenuBar;
 
     // The node editor window
@@ -101,6 +110,7 @@ private:
   }
 
   void handleNewNodes() {
+    std::cout << "handleNewNodes()\n";
 
     // These are driven by the user, so we place this code before rendering the
     // nodes
@@ -166,10 +176,20 @@ private:
           ImNodes::SetNodeScreenSpacePos(ui_node.id, click_pos);
         }
 
-        if (ImGui::MenuItem("source")) {
+        if (ImGui::MenuItem("const_source")) {
           UiNode ui_node;
-          ui_node.type = UiNodeType::source;
-          ui_node.id = graph_.insert_node(Node(NodeType::source, 1, 0.5f));
+          ui_node.type = UiNodeType::const_source;
+          ui_node.id =
+              graph_.insert_node(Node(NodeType::const_source, 1, 0.5f));
+
+          ui_nodes_.push_back(ui_node);
+          ImNodes::SetNodeScreenSpacePos(ui_node.id, click_pos);
+        }
+
+        if (ImGui::MenuItem("time_source")) {
+          UiNode ui_node;
+          ui_node.type = UiNodeType::time_source;
+          ui_node.id = graph_.insert_node(Node(NodeType::time_source));
 
           ui_nodes_.push_back(ui_node);
           ImNodes::SetNodeScreenSpacePos(ui_node.id, click_pos);
@@ -198,6 +218,7 @@ private:
   }
 
   void drawNodeBlocks() {
+    std::cout << "drawNodeBlocks()\n";
     for (const UiNode &ui_node : ui_nodes_) {
       switch (ui_node.type) {
       case UiNodeType::add: {
@@ -301,11 +322,6 @@ private:
 
         ImGui::Spacing();
 
-        const Node node = graph_.node(ui_node.id);
-        ImGui::Text("%s", std::to_string(node.value).c_str());
-
-        ImGui::Spacing();
-
         {
           ImNodes::BeginOutputAttribute(ui_node.id);
           const float label_width = ImGui::CalcTextSize("output").x;
@@ -316,7 +332,7 @@ private:
 
         ImNodes::EndNode();
       } break;
-      case UiNodeType::source: {
+      case UiNodeType::const_source: {
         ImNodes::BeginNode(ui_node.id);
 
         ImNodes::BeginNodeTitleBar();
@@ -327,8 +343,24 @@ private:
         ImGui::Text("output");
         ImNodes::EndOutputAttribute();
 
+        ImNodes::EndNode();
+      } break;
+      case UiNodeType::time_source: {
+        ImNodes::BeginNode(ui_node.id);
+
+        ImNodes::BeginNodeTitleBar();
+        ImGui::TextUnformatted("time_source");
+        ImNodes::EndNodeTitleBar();
+
+        ImNodes::BeginOutputAttribute(ui_node.id);
+        ImGui::Text("output");
+        ImNodes::EndOutputAttribute();
+
+        ImGui::Spacing();
         const Node node = graph_.node(ui_node.id);
-        ImGui::Text("%s", std::to_string(node.value).c_str());
+        std::cout << "Time source Node Value: " << node.value
+                  << std::endl; // Debug output
+        ImGui::Text("%s sec", std::to_string(node.value).c_str());
 
         ImNodes::EndNode();
       } break;
@@ -341,6 +373,7 @@ private:
         ImNodes::EndNodeTitleBar();
 
         ImGui::Dummy(ImVec2(node_width, 0.f));
+
         {
           const int input_id = ui_node.input_node_ids[0];
           ImNodes::BeginInputAttribute(input_id);
@@ -358,6 +391,8 @@ private:
 
         ImGui::Spacing();
         const Node node = graph_.node(ui_node.id);
+        std::cout << "Sink Node Value: " << node.value
+                  << std::endl; // Debug output
         ImGui::Text("%s", std::to_string(node.value).c_str());
 
         ImNodes::EndNode();
@@ -369,6 +404,7 @@ private:
   }
 
   void drawEdges() {
+    std::cout << "drawEdges()\n";
     for (const auto &edge : graph_.edges()) {
       // If edge doesn't start on a i/o (value) node, then it's
       // an internal edge.
@@ -382,6 +418,7 @@ private:
   }
 
   void handleNewLinks() {
+    std::cout << "handleNewLinks()\n";
     // These are driven by Imnodes, so we pace the code after EndNodeEditor().
 
     {
@@ -404,6 +441,7 @@ private:
   }
 
   void handleDeletedLinks() {
+    std::cout << "handleDeletedLinks()\n";
     {
       int link_id;
       if (ImNodes::IsLinkDestroyed(&link_id)) {
@@ -458,6 +496,7 @@ private:
   }
 
   void process() {
+    std::cout << "process()\n";
     std::stack<int> postorder;
     dfs_traverse(
         graph_, root_node_id_,
@@ -490,8 +529,12 @@ private:
         const float res = std::abs(std::sin(x));
         value_stack.push(res);
       } break;
-      case NodeType::source: {
+      case NodeType::const_source: {
         value_stack.push(node.value);
+      } break;
+      case NodeType::time_source: {
+        graph_.set_node_value(id, current_time_s);
+        value_stack.push(current_time_s);
       } break;
       case NodeType::input: {
         // If the edge does not have an edge connecting to another node, then
@@ -506,8 +549,7 @@ private:
         break;
       }
     }
-    Node node = graph_.node(root_node_id_);
-    node.value = value_stack.top();
+    graph_.set_node_value(root_node_id_, value_stack.top());
   }
 
 private:
@@ -515,6 +557,7 @@ private:
   std::vector<UiNode> ui_nodes_;
   int root_node_id_;
   ImNodesMiniMapLocation minimap_location_;
+  double current_time_s;
 };
 
 } // namespace nodes_editor

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "node.h"
 #include <algorithm>
 #include <cassert>
 #include <iterator>
@@ -193,6 +194,9 @@ public:
   int insert_edge(int from, int to);
   void erase_edge(int edge_id);
 
+  // Mutate
+  void set_node_value(int node_id, float new_value);
+
 private:
   int current_id_;
   // These contains map to the node id
@@ -329,5 +333,13 @@ void dfs_traverse(const Graph<NodeType> &graph, const int start_node,
     }
   }
 }
-} // namespace nodes_editor
 
+template <typename NodeType>
+// Method to set the value of a node by ID
+void Graph<NodeType>::set_node_value(int node_id, float new_value) {
+  auto iter = nodes_.find(node_id);
+  if (iter != nodes_.end()) {
+    iter->value = new_value;
+  }
+}
+} // namespace nodes_editor

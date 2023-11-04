@@ -14,7 +14,8 @@ enum class NodeType {
   multiply,
   sine,
   input,
-  source,
+  const_source,
+  time_source,
   sink,
 };
 

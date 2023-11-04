@@ -8,7 +8,8 @@ enum class UiNodeType {
   multiply,
   sine,
   input,
-  source,
+  const_source,
+  time_source,
   sink,
 };
 
